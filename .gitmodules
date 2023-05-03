@@ -1,0 +1,57 @@
+[submodule "bzlmodRio-allwpilib"]
+	path = libraries/bzlmodRio-allwpilib
+	url = git@github.com:bzlmodRio/bzlmodRio-allwpilib.git
+[submodule "bzlmodRio-apriltaglib"]
+	path = libraries/bzlmodRio-apriltaglib
+	url = git@github.com:bzlmodRio/bzlmodRio-apriltaglib.git
+[submodule "bzlmodRio-ctre"]
+	path = libraries/bzlmodRio-ctre
+	url = git@github.com:bzlmodRio/bzlmodRio-ctre.git
+[submodule "bzlmodRio-imgui"]
+	path = libraries/bzlmodRio-imgui
+	url = git@github.com:bzlmodRio/bzlmodRio-imgui.git
+[submodule "bzlmodRio-libssh"]
+	path = libraries/bzlmodRio-libssh
+	url = git@github.com:bzlmodRio/bzlmodRio-libssh.git
+[submodule "libraries/bzlmodRio-navx"]
+	path = libraries/bzlmodRio-navx
+	url = git@github.com:bzlmodRio/bzlmodRio-navx.git
+[submodule "libraries/bzlmodRio-ni"]
+	path = libraries/bzlmodRio-ni
+	url = git@github.com:bzlmodRio/bzlmodRio-ni.git
+[submodule "libraries/bzlmodRio-opencv"]
+	path = libraries/bzlmodRio-opencv
+	url = git@github.com:bzlmodRio/bzlmodRio-opencv.git
+[submodule "libraries/bzlmodRio-revlib"]
+	path = libraries/bzlmodRio-revlib
+	url = git@github.com:bzlmodRio/bzlmodRio-revlib.git
+[submodule "rules/rules_bazelrio"]
+	path = rules/rules_bazelrio
+	url = git@github.com:bzlmodRio/rules_bazelrio.git
+[submodule "rules/rules_bzlmodrio_toolchains"]
+	path = rules/rules_bzlmodrio_toolchains
+	url = git@github.com:bzlmodRio/rules_bzlmodrio_toolchains.git
+[submodule "rules/rules_checkstyle"]
+	path = rules/rules_checkstyle
+	url = git@github.com:bzlmodRio/rules_checkstyle.git
+[submodule "rules/rules_pmd"]
+	path = rules/rules_pmd
+	url = git@github.com:bzlmodRio/rules_pmd.git
+[submodule "rules/rules_roborio_toolchain"]
+	path = rules/rules_roborio_toolchain
+	url = git@github.com:bzlmodRio/rules_roborio_toolchain.git
+[submodule "rules/rules_spotless"]
+	path = rules/rules_spotless
+	url = git@github.com:bzlmodRio/rules_spotless.git
+[submodule "rules/rules_wpiformat"]
+	path = rules/rules_wpiformat
+	url = git@github.com:bzlmodRio/rules_wpiformat.git
+[submodule "gentool"]
+	path = gentool
+	url = git@github.com:bzlmodRio/gentool.git
+[submodule "bazel-central-registry"]
+	path = bazel-central-registry
+	url = git@github.com:bzlmodRio/bazel-central-registry.git
+[submodule "bzlmodRio"]
+	path = bzlmodRio
+	url = git@github.com:bzlmodRio/bzlmodRio.git
