@@ -10,7 +10,7 @@ for project in "${PROJECTS[@]}"; do
     if [ -f $GENERATION_DIR/generate.py ] ; then
         echo "Generating $project"
         cd $GENERATION_DIR
-        bazel run //:generate 2> /dev/null
+        bazel run //:generate # 2> /dev/null
         err=$?
         if [[ $err -ne 0 ]]; then
             echo "FAILED"
