@@ -1,0 +1,32 @@
+name: Build example project
+on: [pull_request, push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+  
+jobs:
+  format_projects:
+    name: "Build - ${{ matrix.name }}"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10.8'
+    - run: ./generate_subprojects.sh
+      working-directory: monorepo_tools
+
+    - name: Check Output
+      run: git --no-pager diff --exit-code HEAD
+
+    - name: Generate diff
+      run: git diff HEAD > generation-fixes.patch
+      if: ${{ failure() }}
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: generation fixes
+        path: generation-fixes.patch
+      if: ${{ failure() }}
