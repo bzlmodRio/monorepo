@@ -55,3 +55,6 @@
 [submodule "bzlmodRio"]
 	path = bzlmodRio
 	url = git@github.com:bzlmodRio/bzlmodRio.git
+[submodule "rules/rules_wpi_styleguide"]
+	path = rules/rules_wpi_styleguide
+	url = git@github.com:bzlmodRio/rules_wpi_styleguide.git
