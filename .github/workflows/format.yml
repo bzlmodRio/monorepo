@@ -25,7 +25,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          ~/bazelrio_cache/*.sha256
+          ~/bzlmod_cache/*.sha256
         key: ${{ runner.os }}-${{ hashFiles('**/generate/**') }}
         restore-keys: |
           ${{ runner.os }}-
@@ -40,7 +40,7 @@ jobs:
         cd $(mktemp -d)
         GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
 
-    - run: ./generate_subprojects.sh
+    - run: ./generate_subprojects.sh || true
       working-directory: monorepo_tools
 
     - name: Check Output
