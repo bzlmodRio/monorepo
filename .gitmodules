@@ -48,7 +48,7 @@
 	url = git@github.com:bzlmodRio/rules_wpiformat.git
 [submodule "gentool"]
 	path = gentool
-	url = git@github.com:bzlmodRio/gentool.git
+	url = https://github.com/bzlmodRio/gentool.git
 [submodule "bazel-central-registry"]
 	path = bazel-central-registry
 	url = git@github.com:bzlmodRio/bazel-central-registry.git
