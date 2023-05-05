@@ -14,9 +14,26 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: "recursive"
+
+    - name: Setup Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/bazelrio_cache/*.sha256
+        key: ${{ runner.os }}-${{ hashFiles('**/generate/**') }}
+        restore-keys: |
+          ${{ runner.os }}-
+          ${{ runner.os }}
+
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10.8'
+
+    - name: Install Buildifier
+      run: |
+        cd $(mktemp -d)
+        GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
+
     - run: ./generate_subprojects.sh
       working-directory: monorepo_tools
 
@@ -24,7 +41,7 @@ jobs:
       run: git --no-pager diff --exit-code HEAD
 
     - name: Generate diff
-      run: git diff HEAD > generation-fixes.patch
+      run: git diff HEAD --submodule=diff > generation-fixes.patch
       if: ${{ failure() }}
 
     - uses: actions/upload-artifact@v2
