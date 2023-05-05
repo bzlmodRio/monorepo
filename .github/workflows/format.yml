@@ -40,7 +40,7 @@ jobs:
         cd $(mktemp -d)
         GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
 
-    - run: ./generate_subprojects.sh || true
+    - run: ./generate_subprojects.sh
       working-directory: monorepo_tools
 
     - name: Check Output

@@ -21,6 +21,7 @@ RULES_PROJECTS=(
     "rules/rules_pmd"
     "rules/rules_spotless"
     "rules/rules_wpiformat"
+    "rules/rules_wpi_styleguide"
 )
 
 
