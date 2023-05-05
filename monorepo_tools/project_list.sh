@@ -28,6 +28,7 @@ RULES_PROJECTS=(
 PROJECTS=(
     "gentool"
     "bzlmodRio"
+    "bazel-central-registry"
 )
 
 PROJECTS=("${PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" "${RULES_PROJECTS[@]}")
