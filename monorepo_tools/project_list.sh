@@ -31,4 +31,4 @@ PROJECTS=(
     "bazel-central-registry"
 )
 
-PROJECTS=("${PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" "${RULES_PROJECTS[@]}")
+PROJECTS=("${RULES_PROJECTS[@]}" "${PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
