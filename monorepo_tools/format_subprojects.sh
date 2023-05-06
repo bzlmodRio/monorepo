@@ -13,7 +13,10 @@ try_wpiformat() {
 }
 
 
-for project in "${LIBRARY_PROJECTS[@]}"; do    
+
+PROJECTS_TO_FORMAT=("${RULES_PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
+
+for project in "${PROJECTS_TO_FORMAT[@]}"; do    
     cd $MONOREPO_BASE/$project
     python3 -m autoflake $(git ls-files '*.py') --in-place --remove-unused-variable --remove-all-unused-imports
     python3 -m black .
