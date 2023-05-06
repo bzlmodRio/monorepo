@@ -14,7 +14,7 @@ try_wpiformat() {
 
 
 
-PROJECTS_TO_FORMAT=("${RULES_PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
+PROJECTS_TO_FORMAT=("gentool" "${RULES_PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
 
 for project in "${PROJECTS_TO_FORMAT[@]}"; do    
     cd $MONOREPO_BASE/$project

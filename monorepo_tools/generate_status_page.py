@@ -1,5 +1,3 @@
-
-
 def main():
     output = ""
 
@@ -13,7 +11,6 @@ def main():
         "bzlmodRio-ni",
         "bzlmodRio-opencv",
         "bzlmodRio-revlib",
-
         "rules_bazelrio",
         "rules_bzlmodrio_toolchains",
         "rules_checkstyle",
@@ -31,10 +28,9 @@ def main():
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
         output += "<br>"
 
-
-    with open("/home/pjreiniger/git/bzlmodRio/monorepo/status.html", 'w') as f:
+    with open("/home/pjreiniger/git/bzlmodRio/monorepo/status.html", "w") as f:
         f.write(output)
-    
+
 
 if __name__ == "__main__":
     main()
