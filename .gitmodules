@@ -37,9 +37,6 @@
 [submodule "rules/rules_pmd"]
 	path = rules/rules_pmd
 	url = git@github.com:bzlmodRio/rules_pmd.git
-[submodule "rules/rules_roborio_toolchain"]
-	path = rules/rules_roborio_toolchain
-	url = git@github.com:bzlmodRio/rules_roborio_toolchain.git
 [submodule "rules/rules_spotless"]
 	path = rules/rules_spotless
 	url = git@github.com:bzlmodRio/rules_spotless.git
