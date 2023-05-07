@@ -27,6 +27,7 @@ def main():
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg?branch={branch}"></a>\n'
+        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg?branch=2024.DUMMY"></a>\n'
         output += "<br>"
 
     with open("/home/pjreiniger/git/bzlmodRio/monorepo/status.html", "w") as f:
