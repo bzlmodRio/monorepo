@@ -8,7 +8,7 @@ LIBRARY_PROJECTS=(
 
     "libraries/bzlmodRio-allwpilib"
 
-    "libraries/bzlmodRio-ctre"
+    "libraries/bzlmodRio-phoenix"
     "libraries/bzlmodRio-navx"
     "libraries/bzlmodRio-revlib"
 )

@@ -5,5 +5,5 @@ source ./common.sh
 
 for project in "${PROJECTS[@]}"; do  
     cd $MONOREPO_BASE/$project
-    git tag -l | xargs git tag -d
+    git checkout refactor_dev
 done
