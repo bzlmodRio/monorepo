@@ -5,7 +5,7 @@
 	path = libraries/bzlmodRio-apriltaglib
 	url = git@github.com:bzlmodRio/bzlmodRio-apriltaglib.git
 [submodule "bzlmodRio-ctre"]
-	path = libraries/bzlmodRio-ctre
+	path = libraries/bzlmodRio-phoenix
 	url = git@github.com:bzlmodRio/bzlmodRio-ctre.git
 [submodule "bzlmodRio-imgui"]
 	path = libraries/bzlmodRio-imgui
