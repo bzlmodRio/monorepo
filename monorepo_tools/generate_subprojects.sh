@@ -4,13 +4,15 @@
 source ./project_list.sh
 source ./common.sh
 
+GEN_ARGS="--use_local_rules_pmd --use_local_rules_checkstyle --use_local_rules_wpiformat --use_local_rules_spotless --use_local_rules_wpi_styleguide"
+
 
 for project in "${PROJECTS[@]}"; do    
     GENERATION_DIR=$MONOREPO_BASE/$project/generate
     if [ -f $GENERATION_DIR/generate.py ] ; then
         echo "Generating $project"
         cd $GENERATION_DIR
-        bazel run //:generate # 2> /dev/null
+        bazel run //:generate -- $GEN_ARGS # 2> /dev/null
         err=$?
         if [[ $err -ne 0 ]]; then
             echo "FAILED"
