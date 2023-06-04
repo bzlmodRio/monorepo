@@ -26,5 +26,5 @@ for project in "${PROJECTS_TO_FORMAT[@]}"; do
     try_wpiformat "$MONOREPO_BASE/$project/tests"
 
     cd $MONOREPO_BASE/$project
-    buildifier --lint=fix -r .
+    buildifier -warnings all --lint=fix -r .
 done
