@@ -4,7 +4,8 @@
 source ./project_list.sh
 source ./common.sh
 
-GEN_ARGS="--use_local_rules_pmd --use_local_rules_checkstyle --use_local_rules_wpiformat --use_local_rules_spotless --use_local_rules_wpi_styleguide"
+# GEN_ARGS="--use_local_rules_pmd --use_local_rules_checkstyle --use_local_rules_wpiformat --use_local_rules_spotless --use_local_rules_wpi_styleguide"
+GEN_ARGS=""
 
 
 for project in "${PROJECTS[@]}"; do    
@@ -20,7 +21,7 @@ for project in "${PROJECTS[@]}"; do
         fi;
         
         cd $MONOREPO_BASE/$project
-        buildifier --lint=fix -r .
+        buildifier  -warnings all --lint=fix -r .
     else
         echo "Project $project does not seem generate-able"
     fi
