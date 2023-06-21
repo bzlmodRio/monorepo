@@ -38,7 +38,7 @@ jobs:
     - name: Install Buildifier
       run: |
         cd $(mktemp -d)
-        GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
+        GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@latest
 
     - run: ./generate_subprojects.sh
       working-directory: monorepo_tools
