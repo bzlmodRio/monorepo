@@ -13,12 +13,19 @@ for project in "${PROJECTS[@]}"; do
         bazel run //:auto_update 2> /dev/null
         err=$?
         if [[ $err -ne 0 ]]; then
-            echo "FAILED"
+            echo "Failed to update"
+            exit $err
+        fi;
+        
+        bazel run //:generate -- $GEN_ARGS # 2> /dev/null
+        err=$?
+        if [[ $err -ne 0 ]]; then
+            echo "Failed to update"
             exit $err
         fi;
         
         cd $MONOREPO_BASE/$project
-        buildifier --lint=fix -r .
+        buildifier  -warnings all --lint=fix -r .
     else
         echo "Project $project does not seem generate-able"
     fi
