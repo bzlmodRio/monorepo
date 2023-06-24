@@ -18,6 +18,8 @@ def main():
         "rules_spotless",
         "rules_wpi_styleguide",
         "rules_wpiformat",
+
+        "bzlmodRio",
     ]
 
     branch = "refactor_dev"
