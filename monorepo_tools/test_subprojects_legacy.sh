@@ -6,10 +6,10 @@ source ./common.sh
 
 FAILURES=""
 
-JOBS=""
+# JOBS=""
 JOBS="-j 2"
 
-for project in "${LIBRARY_PROJECTS[@]}"; do  
+for project in "${LIBRARY_PROJECTS[@]}"; do
     echo "Building Library $project"
     cd $MONOREPO_BASE/$project
     bazel build //... -k --config=linux --config=remote $JOBS
