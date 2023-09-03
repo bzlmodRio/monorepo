@@ -9,6 +9,6 @@ for project in "${PROJECTS[@]}"; do
     git commit -m "Update autogen"
 done
 
-cd $MONOREPO_BASE
-git add .
-git commit -m "Update autogen"
+# cd $MONOREPO_BASE
+# git add .
+# git commit -m "Update autogen"
