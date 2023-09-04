@@ -25,3 +25,5 @@ for project in "${PROJECTS[@]}"; do
     git pull
     git checkout refactor_dev
 done
+
+echo $FAILURES
