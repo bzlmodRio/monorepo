@@ -55,3 +55,9 @@
 [submodule "rules/rules_wpi_styleguide"]
 	path = rules/rules_wpi_styleguide
 	url = https://github.com/bzlmodRio/rules_wpi_styleguide.git
+[submodule "libraries/bzlmodRio-pathplannerlib"]
+	path = libraries/bzlmodRio-pathplannerlib
+	url = git@github.com:bzlmodRio/bzlmodRio-pathplannerlib.git
+[submodule "libraries/bzlmodRio-photonlib"]
+	path = libraries/bzlmodRio-photonlib
+	url = git@github.com:bzlmodRio/bzlmodRio-photonlib.git
