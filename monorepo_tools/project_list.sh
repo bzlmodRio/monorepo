@@ -11,6 +11,8 @@ LIBRARY_PROJECTS=(
     "libraries/bzlmodRio-phoenix"
     "libraries/bzlmodRio-navx"
     "libraries/bzlmodRio-revlib"
+    "libraries/bzlmodRio-photonlib"
+    "libraries/bzlmodRio-pathplannerlib"
 )
 
 RULES_PROJECTS=(
