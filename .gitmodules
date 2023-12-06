@@ -61,3 +61,6 @@
 [submodule "libraries/bzlmodRio-photonlib"]
 	path = libraries/bzlmodRio-photonlib
 	url = git@github.com:bzlmodRio/bzlmodRio-photonlib.git
+[submodule "rules/rules_robotpy_utils"]
+	path = rules/rules_robotpy_utils
+	url = git@github.com:bzlmodRio/rules_robotpy_utils.git
