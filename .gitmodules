@@ -64,3 +64,6 @@
 [submodule "rules/rules_robotpy_utils"]
 	path = rules/rules_robotpy_utils
 	url = git@github.com:bzlmodRio/rules_robotpy_utils.git
+[submodule "libraries/bzlmodRio-phoenix6"]
+	path = libraries/bzlmodRio-phoenix6
+	url = git@github.com:bzlmodRio/bzlmodRio-phoenix6.git
