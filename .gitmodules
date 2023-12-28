@@ -67,3 +67,6 @@
 [submodule "libraries/bzlmodRio-phoenix6"]
 	path = libraries/bzlmodRio-phoenix6
 	url = git@github.com:bzlmodRio/bzlmodRio-phoenix6.git
+[submodule "rules/rules_bzlmodrio_jdk"]
+	path = rules/rules_bzlmodrio_jdk
+	url = git@github.com:bzlmodRio/rules_bzlmodrio_jdk.git
