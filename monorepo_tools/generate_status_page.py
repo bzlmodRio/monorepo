@@ -1,20 +1,28 @@
+#!/bin/python3
+
 def main():
     output = ""
 
     projects = [
         "bzlmodRio-allwpilib",
         "bzlmodRio-apriltaglib",
-        "bzlmodRio-phoenix",
         "bzlmodRio-imgui",
         "bzlmodRio-libssh",
         "bzlmodRio-navx",
         "bzlmodRio-ni",
         "bzlmodRio-opencv",
+        "bzlmodRio-pathplannerlib",
+        "bzlmodRio-phoenix",
+        "bzlmodRio-phoenix6",
+        "bzlmodRio-photonlib",
         "bzlmodRio-revlib",
+
         "rules_bazelrio",
+        "rules_bzlmodrio_jdk",
         "rules_bzlmodrio_toolchains",
         "rules_checkstyle",
         "rules_pmd",
+        "rules_robotpy_utils",
         "rules_spotless",
         "rules_wpi_styleguide",
         "rules_wpiformat",
@@ -28,8 +36,6 @@ def main():
         output += f"{project}<br>\n"
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
         output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg?branch={branch}"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg?branch=2024.DUMMY"></a>\n'
         output += f"Main:"
         output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>\n'
         output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>\n'
