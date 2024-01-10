@@ -12,6 +12,7 @@ for project in "${PROJECTS[@]}"; do
         cd $GENERATION_DIR
         bazel run //:auto_update 2> /dev/null
         err=$?
+        bazel shutdown
         if [[ $err -ne 0 ]]; then
             echo "Failed to update"
             exit $err
@@ -19,6 +20,7 @@ for project in "${PROJECTS[@]}"; do
         
         bazel run //:generate -- $GEN_ARGS # 2> /dev/null
         err=$?
+        bazel shutdown
         if [[ $err -ne 0 ]]; then
             echo "Failed to update"
             exit $err
