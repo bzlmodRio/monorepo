@@ -24,6 +24,13 @@ for project in "${PROJECTS[@]}"; do
     git checkout main
     git pull
     git checkout refactor_dev
+    
+    git diff origin/main --exit-code &> /dev/null
+    if [ $? -ne 0 ]; then
+        echo "$project has differences from main"
+        FAILURES="$FAILURES $project"
+        continue
+    fi
 done
 
 echo $FAILURES
