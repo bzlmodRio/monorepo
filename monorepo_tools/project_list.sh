@@ -14,6 +14,7 @@ LIBRARY_PROJECTS=(
     "libraries/bzlmodRio-revlib"
     "libraries/bzlmodRio-photonlib"
     "libraries/bzlmodRio-pathplannerlib"
+    "libraries/bzlmodRio-choreo"
 )
 
 RULES_PROJECTS=(

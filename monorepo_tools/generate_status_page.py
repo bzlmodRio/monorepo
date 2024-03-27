@@ -6,6 +6,7 @@ def main():
     projects = [
         "bzlmodRio-allwpilib",
         "bzlmodRio-apriltaglib",
+        "bzlmodRio-choreo",
         "bzlmodRio-imgui",
         "bzlmodRio-libssh",
         "bzlmodRio-navx",
