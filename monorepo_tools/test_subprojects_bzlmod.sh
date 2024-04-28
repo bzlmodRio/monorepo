@@ -17,6 +17,7 @@ for project in "${LIBRARY_PROJECTS[@]}"; do
         echo "Failed"
         FAILURES="$FAILURES $project"
     fi
+    bazel shutdown
 
     cd $MONOREPO_BASE/$project/tests
     bazel test //... -k --config=linux --config=remote --enable_bzlmod $JOBS
@@ -24,6 +25,7 @@ for project in "${LIBRARY_PROJECTS[@]}"; do
         echo "Failed"
         FAILURES="$FAILURES $project/tests"
     fi
+    bazel shutdown
 done
 
 for project in "${RULES_PROJECTS[@]}"; do  
@@ -34,6 +36,7 @@ for project in "${RULES_PROJECTS[@]}"; do
         echo "Failed"
         FAILURES="$FAILURES $project"
     fi
+    bazel shutdown
 done
 
 echo "Failed: " $FAILURES
