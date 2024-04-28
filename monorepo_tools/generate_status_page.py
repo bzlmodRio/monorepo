@@ -1,7 +1,55 @@
 #!/bin/python3
 
-def main():
+
+def write_html_page(projects, branch):
     output = ""
+
+    for project in projects:
+        output += f"{project}<br>\n"
+        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
+        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
+        output += f"Main:"
+        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>\n'
+        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>\n'
+        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>\n'
+        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>\n'
+        output += "<br>"
+
+    with open("/home/pjreiniger/git/bzlmodRio/monorepo/status.html", "w") as f:
+        f.write(output)
+
+
+def write_readme(projects, branch):
+    output = ""
+
+    output += f"## {branch}\n"
+    output += "| Project | Build | Lint |\n"
+    output += "| ------- | ----- | ---- |\n"
+
+    for project in projects:
+        output += f"| {project}"
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
+        output += "|\n"
+
+
+    output += f"## Main\n"
+    output += "| Project | Build | Lint |\n"
+    output += "| ------- | ----- | ---- |\n"
+        
+    for project in projects:
+        output += f"| {project}"
+        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>\n'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>\n'
+        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>\n'
+        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>\n'
+        output += "|\n"
+
+    with open("/home/pjreiniger/git/bzlmodRio/monorepo/README.md", "w") as f:
+        f.write(output)
+
+
+def main():
 
     projects = [
         "bzlmodRio-allwpilib",
@@ -33,20 +81,9 @@ def main():
 
     branch = "refactor_dev"
 
-    for project in projects:
-        output += f"{project}<br>\n"
-        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
-        output += f"Main:"
-        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>\n'
-        output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>\n'
-        output += "<br>"
 
-    with open("/home/pjreiniger/git/bzlmodRio/monorepo/status.html", "w") as f:
-        f.write(output)
-
+    write_html_page(projects, branch)
+    write_readme(projects, branch)
 
 if __name__ == "__main__":
     main()
