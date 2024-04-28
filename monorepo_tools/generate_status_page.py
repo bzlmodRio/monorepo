@@ -28,9 +28,9 @@ def write_readme(projects, branch):
 
     for project in projects:
         output += f"| {project}"
-        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>\n'
-        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>\n'
-        output += "|\n"
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>'
+        output += " |\n"
 
 
     output += f"## Main\n"
@@ -39,11 +39,11 @@ def write_readme(projects, branch):
         
     for project in projects:
         output += f"| {project}"
-        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>\n'
-        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>\n'
-        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>\n'
-        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>\n'
-        output += "|\n"
+        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>'
+        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>'
+        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>'
+        output += " |\n"
 
     with open("/home/pjreiniger/git/bzlmodRio/monorepo/README.md", "w") as f:
         f.write(output)
