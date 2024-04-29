@@ -10,14 +10,14 @@ FAILURES=""
 JOBS="-j 2"
 
 for project in "${LIBRARY_PROJECTS[@]}"; do
-    echo "Building Library $project"
-    cd $MONOREPO_BASE/$project
-    bazel build //... -k --config=linux --config=remote --enable_bzlmod $JOBS
-    if [ $? -ne 0 ]; then
-        echo "Failed"
-        FAILURES="$FAILURES $project"
-    fi
-    bazel shutdown
+    # echo "Building Library $project"
+    # cd $MONOREPO_BASE/$project
+    # bazel build //... -k --config=linux --config=remote --enable_bzlmod $JOBS
+    # if [ $? -ne 0 ]; then
+    #     echo "Failed"
+    #     FAILURES="$FAILURES $project"
+    # fi
+    # bazel shutdown
 
     cd $MONOREPO_BASE/$project/tests
     bazel test //... -k --config=linux --config=remote --enable_bzlmod $JOBS

@@ -10,6 +10,7 @@ clean_if_exists() {
             echo "Cleaning $1" 
             cd $1
             bazel clean --expunge
+            bazel shutdown
         else
             echo "$1 seems clean...."
         fi
