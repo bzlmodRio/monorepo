@@ -11,6 +11,9 @@ def main(argv):
 
     if project_name.startswith("libraries"):
         project_name = project_name[10:]
+        
+    if project_name.startswith("rules"):
+        project_name = project_name[6:]
 
     print(f"Creating PR for project {project_name}, branch {branch_name} - Title: '{title}'")
 
