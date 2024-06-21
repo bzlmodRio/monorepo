@@ -6,7 +6,8 @@ source ./common.sh
 
 FAILURES=""
 
-for project in "${PROJECTS[@]}"; do    
+for project in "${PROJECTS[@]}"; do   
+    echo "Running $project"
     cd $MONOREPO_BASE/$project
     bazel build //... --nobuild --enable_bzlmod --lockfile_mode=update -k
     if [ $? -ne 0 ]; then
