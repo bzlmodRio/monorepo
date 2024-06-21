@@ -34,14 +34,14 @@ def write_readme(projects, branch):
 
 
     output += f"## Main\n"
-    output += "| Project | Build | Lint |\n"
-    output += "| ------- | ----- | ---- |\n"
+    output += "| Project | Build | Lint | Auto Update |\n"
+    output += "| ------- | ----- | ---- | ----------- |\n"
         
     for project in projects:
         output += f"| {project}"
         output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>'
         output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>'
-        # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>'
         # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>'
         output += " |\n"
 
