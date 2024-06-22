@@ -8,6 +8,7 @@ source ./common.sh
 GEN_ARGS=""
 
 
+# for project in "${LIBRARY_PROJECTS[@]}"; do    
 for project in "${PROJECTS[@]}"; do    
     GENERATION_DIR=$MONOREPO_BASE/$project/generate
     if [ -f $GENERATION_DIR/generate.py ] ; then
