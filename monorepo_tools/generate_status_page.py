@@ -28,8 +28,8 @@ def write_readme(projects, branch):
 
     for project in projects:
         output += f"| {project}"
-        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>'
-        output += f'| <a href="https://github.com/bzlmodRio/{project}/tree/{branch}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg?branch={branch}"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg?branch={branch}"></a>'
         output += " |\n"
 
 
@@ -39,9 +39,9 @@ def write_readme(projects, branch):
         
     for project in projects:
         output += f"| {project}"
-        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>'
-        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>'
-        output += f'| <a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/build.yml/badge.svg"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/lint.yml/badge.svg"></a>'
+        output += f'| <a href="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/auto_update.yml/badge.svg"></a>'
         # output += f'<a href="https://github.com/bzlmodRio/{project}"><img src="https://github.com/bzlmodRio/{project}/actions/workflows/publish.yml/badge.svg"></a>'
         output += " |\n"
 
