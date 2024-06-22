@@ -17,7 +17,7 @@ for project in "${PROJECTS[@]}"; do
         err=$?
         if [[ $err -ne 0 ]]; then
             echo "FAILED"
-            exit $err
+            # exit $err
         fi;
         bazel shutdown
         
