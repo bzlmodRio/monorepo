@@ -1,4 +1,4 @@
-workspace(name = "bzlmodrio-ni-gentool")
+workspace(name = "bzlmodrio-opencv-gentool")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
@@ -16,7 +16,7 @@ py_repositories()
 
 local_repository(
     name = "bzlmodrio-gentool",
-    path = "../../../../gentool",
+    path = "../../../gentool",
 )
 
 load("@rules_python//python:pip.bzl", "pip_parse")
