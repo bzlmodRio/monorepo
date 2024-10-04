@@ -8,12 +8,12 @@ def _default_all_platforms():
 def get_ni_dependencies():
     year = "2024"
     version = "2024.2.1"
-    patch = ""
+    patch = ".bcr1"
 
     group_id = f"edu.wpi.first.ni-libraries"
 
     group = DependencyContainer(
-        "bzlmodrio-ni", version, year, "https://frcmaven.wpi.edu/release", patch=patch
+        "bzlmodrio-ni", version, year, "https://frcmaven.wpi.edu/release", patch=patch, organization="wpilibsuite",
     )
     group.create_cc_dependency(
         f"chipobject",

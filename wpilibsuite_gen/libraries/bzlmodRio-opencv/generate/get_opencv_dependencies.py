@@ -47,7 +47,7 @@ def _default_all_platforms():
 def get_opencv_dependencies():
     year = "2024"
     version = "4.8.0-4"
-    patch = ""
+    patch = ".bcr1"
 
     group_id = f"edu.wpi.first.thirdparty.frc{year}.opencv"
 
@@ -56,7 +56,7 @@ def get_opencv_dependencies():
         version,
         year,
         "https://frcmaven.wpi.edu/release",
-        patch=patch,
+        patch=patch, organization="wpilibsuite",
     )
     group.create_cc_dependency(
         f"opencv-cpp",
