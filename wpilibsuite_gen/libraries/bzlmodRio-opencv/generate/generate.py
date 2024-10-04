@@ -9,11 +9,12 @@ from bazelrio_gentool.generate_module_project_files import (
 from bazelrio_gentool.clean_existing_version import clean_existing_version
 from bazelrio_gentool.cli import add_generic_cli, GenericCliArgs
 import argparse
+import subprocess
 
 
 def main():
     SCRIPT_DIR = os.environ["BUILD_WORKSPACE_DIRECTORY"]
-    REPO_DIR = os.path.join(SCRIPT_DIR, "..")
+    REPO_DIR = os.path.join(SCRIPT_DIR, "..", "..", "..", "..", "libraries", "bzlmodRio-opencv")
     output_dir = os.path.join(REPO_DIR, "libraries")
 
     parser = argparse.ArgumentParser()
@@ -27,6 +28,9 @@ def main():
     clean_existing_version(REPO_DIR)
     generate_module_project_files(REPO_DIR, group, mandatory_dependencies)
     generate_group(output_dir, group, force_tests=args.force_tests)
+
+    buildifier_args = ["/home/pjreiniger/go/bin/buildifier", "--lint=fix", "-warnings", "all", "-r", REPO_DIR]
+    subprocess.check_call(buildifier_args)
 
 
 if __name__ == "__main__":
