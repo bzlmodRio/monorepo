@@ -8,7 +8,8 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-PR_PROJECTS=("${RULES_PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
+# PR_PROJECTS=("${RULES_PROJECTS[@]}" "${LIBRARY_PROJECTS[@]}" )
+PR_PROJECTS=("${LIBRARY_PROJECTS[@]}" )
 
 # for project in "${LIBRARY_PROJECTS[@]}"; do  
 # for project in "${RULES_PROJECTS[@]}"; do  
