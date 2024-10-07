@@ -73,3 +73,6 @@
 [submodule "libraries/bzlmodRio-choreo"]
 	path = libraries/bzlmodRio-choreo
 	url = https://github.com/bzlmodRio/bzlmodRio-choreo
+[submodule "wpilibsuite_gen"]
+	path = wpilibsuite_gen
+	url = https://github.com/bzlmodRio/wpilibsuite_generator
