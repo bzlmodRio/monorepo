@@ -1,7 +1,5 @@
 
 LIBRARY_PROJECTS=(
-    "libraries/bzlmodRio-apriltaglib"
-    "libraries/bzlmodRio-imgui"
     "libraries/bzlmodRio-libssh"
     # "libraries/bzlmodRio-ni"
     # "libraries/bzlmodRio-opencv"
