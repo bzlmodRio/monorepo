@@ -11,14 +11,15 @@ jobs:
     name: "Build - ${{ matrix.name }}"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: "recursive"
         
-    - name: Set up Go 1.15.x
-      uses: actions/setup-go@v2
+    - name: Set up Go 1.20.x
+      uses: actions/setup-go@v5
       with:
-        go-version: 1.15.x
+        go-version: 1.20.x
+        cache: false
       id: go
 
     - name: Setup Cache
@@ -31,7 +32,7 @@ jobs:
           ${{ runner.os }}-
           ${{ runner.os }}
 
-    - uses: actions/setup-python@v4
+    - uses: actions/setup-python@v5
       with:
         python-version: '3.10.8'
 
@@ -50,7 +51,7 @@ jobs:
       run: git diff HEAD --submodule=diff > generation-fixes.patch
       if: ${{ failure() }}
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: generation fixes
         path: generation-fixes.patch
