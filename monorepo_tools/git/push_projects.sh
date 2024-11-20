@@ -12,4 +12,5 @@ for project in "${PUSH_PROJECTS[@]}"; do
     git push
 done
 
+cd $MONOREPO_BASE
 git push
