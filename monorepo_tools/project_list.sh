@@ -1,8 +1,6 @@
 
 LIBRARY_PROJECTS=(
     "libraries/bzlmodRio-libssh"
-    # "libraries/bzlmodRio-ni"
-    # "libraries/bzlmodRio-opencv"
 
     "libraries/bzlmodRio-allwpilib"
 
@@ -17,7 +15,6 @@ LIBRARY_PROJECTS=(
 
 RULES_PROJECTS=(
     "rules/rules_bazelrio"
-    # "rules/rules_bzlmodrio_toolchains"
 
     "rules/rules_checkstyle"
     "rules/rules_pmd"
