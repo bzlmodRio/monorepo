@@ -6,7 +6,7 @@ LIBRARY_PROJECTS=(
 
     "libraries/bzlmodRio-phoenix"
     "libraries/bzlmodRio-phoenix6"
-    "libraries/bzlmodRio-navx"
+    "libraries/bzlmodRio-studica"
     "libraries/bzlmodRio-revlib"
     "libraries/bzlmodRio-photonlib"
     "libraries/bzlmodRio-pathplannerlib"
