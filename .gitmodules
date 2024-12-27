@@ -7,9 +7,9 @@
 [submodule "bzlmodRio-libssh"]
 	path = libraries/bzlmodRio-libssh
 	url = git@github.com:bzlmodRio/bzlmodRio-libssh.git
-[submodule "libraries/bzlmodRio-navx"]
-	path = libraries/bzlmodRio-navx
-	url = git@github.com:bzlmodRio/bzlmodRio-navx.git
+[submodule "libraries/bzlmodRio-studica"]
+	path = libraries/bzlmodRio-studica
+	url = git@github.com:bzlmodRio/bzlmodRio-studica.git
 [submodule "libraries/bzlmodRio-ni"]
 	path = libraries/bzlmodRio-ni
 	url = git@github.com:bzlmodRio/bzlmodRio-ni.git
