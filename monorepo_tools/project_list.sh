@@ -1,7 +1,5 @@
 
 LIBRARY_PROJECTS=(
-    "libraries/bzlmodRio-libssh"
-
     "libraries/bzlmodRio-allwpilib"
 
     "libraries/bzlmodRio-phoenix"

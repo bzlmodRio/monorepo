@@ -7,8 +7,8 @@ try_wpiformat() {
     if [ -d $1 ] ; then
         cd $1
         echo "Trying to format $1"
-        bazel run @rules_wpiformat//wpiformat -- -f .. 2> /dev/null || true
-        bazel run @rules_wpiformat//wpiformat -- -f . 2> /dev/null || true
+        bazel run --noenable_bzlmod --enable_workspace @rules_wpiformat//wpiformat -- -f .. 2> /dev/null || true
+        bazel run --noenable_bzlmod --enable_workspace @rules_wpiformat//wpiformat -- -f . 2> /dev/null || true
         wpiformat || true
         bazel shutdown
     fi
